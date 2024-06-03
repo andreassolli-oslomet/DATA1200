@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+/* Headings start */
+h1{
+    font-size: 90px;
+
+}
+h2{
+    color: #BB2649;
+    font-size: 25px;
+}
+h3{
+    font-size: 10px;
+}
+/* Headings slutt */
+
+/* Navigasjonsbar start */
+.navigation {
+    position:relative;
+    justify-content: space-between;
+    align-items:center;
+    display: flex;
+    width:100vw;
+    min-height: 10vh;
+    background: #fff;
+    padding-bottom: 10%;
+}
+
+header{
+    position:absolute;
+    justify-content: space-between;
+    align-items:center;
+    top:0;
+    left:0;
+    width:100vw;
+    padding:10px 5vw;
+    display:flex;
+}
+
+header .logo{
+    padding-top:3%;
+    position: relative;
+    max-width:120px;
+    min-width:40px;
+}
+
+header .logo >img{
+    width:100%;
+    object-fit: fill;
+}
+
+header ul {
+    position:relative;
+    display:flex;
+
+}
+header ul li {
+    list-style:none;
+}
+
+header ul li a{
+    color:#333;
+    font-weight:400;
+    margin-left: 1.5vw;
+    text-decoration: none;
+    font-size:clamp(13px, 1.5vw, 20px);
+
+
+}
+header ul li a:hover{
+    border-bottom:1.5px solid #BB2649;
+}
+/* Navigasjonsbar slutt */
+
+/* Slideshow start */
+
+.slideshow{
+    width:1200px;
+    height:500px;
+    border-radius: 10px;
+    overflow:hidden;
+    justify-self: center;
+    grid-area:slideshow;
+}
+.slides{
+    width:500%;
+    height:500px;
+    display:flex;
+}
+
+.slides input{
+    display:none;
+}
+.slide{
+    width:20%;
+    transition: 2s;
+}
+.slide img{
+    width:1200px;
+    height:500px;
+    object-fit: cover;
+}
+
+.manualnav{
+    position: absolute;
+    width:1200px;
+    margin-top: 520px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    grid-area:slideshow;
+    padding-bottom: 6%;
+}
+/* Slideshow slutt*/
+
+/* Buttons start */
+.manualbutton{
+    border: 3px solid #BB2649;
+    padding:6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manualbutton:not(:last-child){
+    margin-right: 40px;
+}
+
+.manualbutton:hover{
+    background: #BB2649;
+
+}
+#button1:checked~ .first{
+    margin-left:0;
+}
+#button2:checked~ .first{
+    margin-left:-20%;
+}
+#button3:checked~ .first{
+    margin-left:-40%;
+}
+
+/* Buttons slutt*/
+
+/* Frontpage title */
+.title{grid-area: text;
+    width:467px;
+    height:200px;
+    justify-self: center;
+    text-align: center;
+}
+/* Grid frontpage */
+.grid-index {
+    height:60vh;
+    width:100vw;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-areas:
+        'text'
+        'slideshow';
+    grid-gap: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+/*
+CSS for meny
+ */
+
+/* Dish pictures */
+.dishpic > img{
+    width:360px;
+    height:167px;
+    object-fit:cover;
+    outline:2px solid black;
+    margin-bottom:2%;
+}
+/* Dish price */
+.dish p span{
+    display:block;
+    padding-top:20px;
+}
+/* Different dishes headings */
+.dish h2{
+    display:block;
+    padding-left:5%;
+    padding-bottom:2%
+}
+
+.dish p{
+    padding-left:5%;
+}
+
+/* Types of dishes heading */
+.type h2 {
+    padding-top: 6%;
+    padding-bottom: 3%;
+    font-size: 43px;
+    color: #BB2649;
+}
+
+/* Dishes underline */
+.dish:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 27px;
+    border-bottom: 1px solid #BB2649;
+}
+
+/* Title underline */
+.dishes:after {
+    content: "";
+    display: inline-block;
+    width: 30%;
+    padding-top: 5px;
+    border-bottom: 1px solid #BB2649;
+}
+
+/* Grid areas start */
+.dish{
+    justify-self:end;
+    width:360px;
+}
+.type{
+    justify-self:end;
+    width:345px;
+}
+.dishes{grid-area: dishes;
+    text-align: center;
+    padding-bottom:3%;}
+#dish1{grid-area: dish1;}
+#dish2{grid-area: dish2;}
+#dish3{grid-area: dish3;}
+#dish4{grid-area: dish4;}
+#dish5{grid-area: dish5;}
+#dish6{grid-area: dish6;}
+#dish7{grid-area: dish7;
+    margin-bottom:7%;
+}
+#type1{grid-area: type;}
+#type2{grid-area: type2;}
+#type3{grid-area: type3;}
+
+#dish1pic{grid-area: dish1pic;
+justify-self:start;}
+#dish2pic{grid-area: dish2pic;
+    justify-self:start;}
+#dish3pic{grid-area: dish3pic;    justify-self:start;}
+#dish4pic{grid-area: dish4pic;    justify-self:start;}
+#dish5pic{grid-area: dish5pic;    justify-self:start;}
+#dish6pic{grid-area: dish6pic;    justify-self:start;}
+#dish7pic{grid-area: dish7pic;    justify-self:start;}
+/* Grid areas slutt */
+
+/* Grid for menu */
+.grid-menu {
+    width: 100vw;
+    height: 100vh;
+    display: inline-grid;
+    grid-template-columns: repeat(2, auto) ;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'dishes  dishes'
+        'type  .'
+        'dish1  dish1pic'
+        'dish2  dish2pic'
+        'type2  .'
+        'dish3  dish3pic'
+        'dish4  dish4pic'
+        'type3  .'
+        'dish5  dish5pic'
+        'dish6  dish6pic'
+        'dish7  dish7pic';
+    grid-gap: 1vw;
+    background-color: white;
+    padding: 10px;
+}
+/*
+Slutt på CSS for meny
+ */
+
+/*
+CSS for Reservasjoner
+ */
+.bookingsPic >img{
+    width:100%;
+    object-fit: fill;
+    outline:2px solid black;
+}
+
+/* Brødtekst og headings */
+.info address {
+    display: inline;
+}
+
+.info p span{
+    display:block;
+    padding-top:20px;
+}
+.bookings h1{
+    text-align: center;
+    font-size: clamp(25px, 5vw, 90px);
+}
+.info h2{
+    padding-top:20px;
+    display:block;
+    min-width:150px;
+    font-size: clamp(12px, 1.5vw, 35px);
+}
+
+/* Underline */
+.bookings:after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 6px;
+
+    border-bottom: 1px solid #BB2649;
+}
+
+
+
+/* Grid areas start */
+.bookings{
+    grid-area: bookings;
+    justify-self: center;
+text-align: center;}
+
+.info{grid-area: info;
+    padding-top:5%;
+    justify-self:flex-start;
+    max-width:600px;
+    min-width:150px;
+    font-size: clamp(8px, 1.75vw, 20px);}
+.bookingsPic{grid-area: bPicture;
+    padding-top:calc(5% + 20px);
+justify-self: flex-end;
+    max-width:600px;
+    min-width:200px;
+}
+/* Grid areas slutt */
+
+/* Grid booking*/
+.grid-bookings {
+    width: 100vw;
+    height: 15vh;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        'bookings bookings'
+        'bPicture  info';
+    grid-gap: 10px;
+    background-color: white;
+    padding: 10px;
+}
+/*
+Slutt på CSS for Reservasjoner
+ */
+
+/*
+CSS for Topical
+ */
+
+/* Hover function for bilde start */
+.container {
+    position: relative;
+    width: 100%;
+
+}
+
+.hover:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #BB2649;
+    text-align: center;
+
+}
+.hover a{
+    color:white;
+    font-size:20px;
+    text-decoration: none;
+}
+
+.container:hover .hover {
+    opacity: 0.85;
+}
+
+/* Hover function for bilde slutt */
+
+.container >img{
+    display:block;
+    width:100%;
+}
+
+a.link:hover{
+    color:#BB2649;
+    font-weight: bold;
+}
+
+.topicalText h2{
+    display:block;
+
+    padding-bottom:2%;
+    text-align: center;
+}
+.topicalText p{
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.topical{grid-area: topical;
+    text-align: center;
+    justify-self: center;
+    width: 50%;
+}
+.topicalText {
+    grid-area: topicalText;
+    justify-self: center;
+    width: 700px;
+}
+
+.grid-topical {
+    width: 100vw;
+    height: 15vh;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-areas:
+        'topical'
+        'topicalText';
+    grid-gap: 10px;
+    background-color: white;
+    padding: 10px;
+}
+/*
+Slutt på CSS for Topical
+ */
+
+/*
+Formattering på accesibility-siden
+ */
+
+.keyPoints {
+    padding-top: 1%;
+    padding-left:20px;
+}
+.access{
+    padding-left:20px;
+}
+.access p{
+    padding-block: 0.5%; 
+}
+.access h1{
+    padding-bottom: 2%;
+    font-size: 70px;
+}
+.keyPoints p{
+    padding-block: 0.5%;
+}
