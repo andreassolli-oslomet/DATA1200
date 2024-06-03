@@ -1,0 +1,205 @@
+*{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        font-family: Arial, sans-serif;
+        color:rgb(43, 45, 65);
+        background:rgb(211, 193, 171);
+        background-size: cover;
+    }
+
+    h1{
+        margin-top:2%;
+        text-align:center;
+        font-size:80px;
+    }
+    .container{
+        max-width:1920px;
+        margin:auto;
+        overflow:auto;
+        border-bottom:2px solid rgb(43, 45, 65);
+        padding-bottom:30px;
+    }
+    .images{
+        padding-top:5%;
+        margin:35px;
+        float:left;
+        width:570px;
+    }
+    .images img{
+        width:100%;
+        height:auto;
+        float:left;
+        object-fit: cover;
+        object-position: center;
+        padding-bottom:15px;
+    }
+    .desc p{
+        
+        font-size:22px;
+        text-align:center;
+        padding:15px;
+        font-weight:bold;
+    }
+    .Wireframe{
+        padding-top:30px;
+        margin-left:23%;
+        font-size:22px;
+        float:left;
+    }
+    
+    .Wireframe img{
+        margin:50px;
+        width:600px;
+        height:400px;
+        object-fit:cover;   
+    }
+
+    .image__overlay {
+        position: absolute;
+        width: 570px;
+        height: 760px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        font-family: 'Quicksand', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+    
+    .image__overlay--blur {
+        backdrop-filter: blur(5px);
+    }
+    
+    .image__overlay--primary {
+        background: #ffffff69;
+    }
+    
+    .image__overlay > * {
+        transform: translateY(20px);
+        transition: transform 0.25s;
+    }
+    
+    .image__overlay:hover, .image__overlay:active {
+        opacity: 1;
+    }
+    
+    .image__overlay:hover, .image__overlay:active > * {
+        transform: translateY(0);
+    }
+    
+    .image__title {
+        opacity:1;
+        color:rgb(0, 0, 0);
+        font-size: 2.75em;
+        font-weight: bold;
+    }
+
+    .Reflection1{
+        text-align:center;
+        font-size:30px;
+        position: absolute;
+        top: 205%;
+        left:47%;
+        padding-bottom:20px;
+    }
+    .Reflection2{
+        text-align:center;
+        font-size:30px;
+        position: absolute;
+        top: 60%;
+        left:47%;
+        padding-bottom:20px;
+    }
+    .Text{
+        margin-top:2%;
+        margin-left:30%;
+        width:800px;
+        font-size:20px;
+        padding-bottom:30px;
+    }
+    @media (max-width:480px){
+        h1{
+            color:rgb(29, 85, 94);
+            font-size:60px;
+        }
+
+        .container{
+            max-width:470px;
+            margin:auto;
+            overflow:auto;
+            border-bottom:2px solid rgb(43, 45, 65);
+            padding-bottom:30px;
+        }
+    
+        .images{
+            width:430px;
+            margin:20px;
+            float:left;
+            padding-top:15%;
+        }
+        .desc p{
+            font-size:28px;
+        }
+        .image__overlay {
+            position: absolute;
+            width: 430px;
+            height: 504px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        
+        .image__overlay--blur {
+            backdrop-filter: blur(5px);
+        }
+        
+        .image__overlay--primary {
+            background: #ffffff69;
+        }
+        
+        .image__overlay > * {
+            transform: translateY(20px);
+            transition: transform 0.25s;
+        }
+        
+        .image__overlay:hover, .image__overlay:active {
+            opacity: 1;
+        }
+        
+        .image__overlay:hover, .image__overlay:active > * {
+            transform: translateY(0);
+        }
+        
+        .image__title {
+            opacity:1;
+            color:rgb(0, 0, 0);
+            font-size: 2.75em;
+            font-weight: bold;
+        }
+        .Wireframe{
+            padding-top:20px;
+            margin-left:1%;
+            font-size:22px;
+            float:left;
+        }
+        
+        .Wireframe img{
+            margin:20px;
+            width:430px;
+            height:310px;
+            object-fit:cover;   
+        }
+    }
+    
